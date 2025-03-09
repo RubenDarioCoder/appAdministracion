@@ -7,12 +7,23 @@ let productos = [];
 
 // Cargar datos desde localStorage al iniciar
 const cargarDatos = () => {
-    produccion = JSON.parse(localStorage.getItem('produccion')) || [];
-    pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-    ventas = JSON.parse(localStorage.getItem('ventas')) || [];
-    insumos = JSON.parse(localStorage.getItem('insumos')) || [];
-    clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-    productos = JSON.parse(localStorage.getItem('productos')) || [];
+    try {
+        produccion = JSON.parse(localStorage.getItem('produccion')) || [];
+        pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+        ventas = JSON.parse(localStorage.getItem('ventas')) || [];
+        insumos = JSON.parse(localStorage.getItem('insumos')) || [];
+        clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+        productos = JSON.parse(localStorage.getItem('productos')) || [];
+    } catch (error) {
+        console.error("Error al cargar datos desde localStorage:", error);
+        // Si hay un error, inicializar las listas como vacías
+        produccion = [];
+        pedidos = [];
+        ventas = [];
+        insumos = [];
+        clientes = [];
+        productos = [];
+    }
 };
 
 // Guardar datos en localStorage
