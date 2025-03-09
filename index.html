@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Administracion</title>
+</head>
+<body>
+    <header class="header">
+        
+            <p id="mostrarFecha"></p>
+        </nav>
+        <h1>Administracion</h1>
+    </header>
+
+    <main class="main">
+        <!-- Sección de Producción -->
+        <div class="label-container">
+            <label for="produccion" class="toggle-label">Produccion</label>
+            <div id="produccion-content" class="content">
+                <input id="productoProduccion" placeholder="Producto">
+                <input id="cantidadProduccion" placeholder="Cantidad">
+                <button id="agregarProduccion">Agregar Producción</button>
+                <div id="listaProduccion"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Pedidos -->
+        <div class="label-container">
+            <label for="pedidos" class="toggle-label">Pedidos</label>
+            <div id="pedidos-content" class="content">
+                <input id="clientePedido" placeholder="Cliente">
+                <input id="productoPedido" placeholder="Producto">
+                <input id="cantidadPedido" placeholder="Cantidad">
+                <button id="agregarPedido">Agregar Pedido</button>
+                <div id="listaPedidos"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Ventas -->
+        <div class="label-container">
+            <label for="ventas" class="toggle-label">Ventas</label>
+            <div id="ventas-content" class="content">
+                <input id="clienteVenta" placeholder="Cliente">
+                <input id="productoVenta" placeholder="Producto">
+                <input id="cantidadVenta" placeholder="Cantidad">
+                <input id="precioVenta" placeholder="Precio">
+                <button id="agregarVenta">Agregar Venta</button>
+                <div id="listaVentas"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Insumos -->
+        <div class="label-container">
+            <label for="insumos" class="toggle-label">Insumos</label>
+            <div id="insumos-content" class="content">
+                <input id="insumoInsumo" placeholder="Insumo">
+                <input id="cantidadInsumo" placeholder="Cantidad">
+                <input id="precioInsumo" placeholder="Precio">
+                <button id="agregarInsumo">Agregar Insumo</button>
+                <div id="listaInsumos"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Clientes -->
+        <div class="label-container">
+            <label for="clientes" class="toggle-label">Clientes</label>
+            <div id="clientes-content" class="content">
+                <input id="nombreCliente" placeholder="Nombre">
+                <input id="contactoCliente" placeholder="Contacto">
+                <button id="agregarCliente">Agregar Cliente</button>
+                <div id="listaClientes"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Producto -->
+        <div class="label-container">
+            <label for="producto" class="toggle-label">Producto</label>
+            <div id="producto-content" class="content">
+                <input id="nombreProducto" placeholder="Producto">
+                <input id="Precio" placeholder="Precio">
+                <button id="agregarProducto">Agregar Producto</button>
+                <div id="listaProductos"></div>
+            </div>
+        </div>
+
+        <!-- Sección de Balance -->
+        <div class="label-container">
+            <label for="balance" class="toggle-label">Balance</label>
+            <div id="balance-content" class="content">
+                <h3>Resumen Financiero</h3>
+                <p><strong>Ingresos:</strong> <span id="ingresos">$0</span></p>
+                <p><strong>Gastos:</strong> <span id="gastos">$0</span></p>
+                <p><strong>Utilidad:</strong> <span id="utilidad">$0</span></p>
+                <p><strong>Inventario:</strong> <span id="inventario">0 unidades</span></p>
+                <h3>Detalles</h3>
+                <div id="detallesBalance"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">Footer</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
