@@ -1,3 +1,5 @@
+const datosAppAdministracion = 'miAppUnica_'; // Cambia esto por un nombre único para tu aplicación
+
 let produccion = [];
 let pedidos = [];
 let ventas = [];
@@ -8,12 +10,12 @@ let productos = [];
 // Cargar datos desde localStorage al iniciar
 const cargarDatos = () => {
     try {
-        produccion = JSON.parse(localStorage.getItem('produccion')) || [];
-        pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-        ventas = JSON.parse(localStorage.getItem('ventas')) || [];
-        insumos = JSON.parse(localStorage.getItem('insumos')) || [];
-        clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-        productos = JSON.parse(localStorage.getItem('productos')) || [];
+        produccion = JSON.parse(localStorage.getItem(`${datosAppAdministracion}produccion`)) || [];
+        pedidos = JSON.parse(localStorage.getItem(`${datosAppAdministracion}pedidos`)) || [];
+        ventas = JSON.parse(localStorage.getItem(`${datosAppAdministracion}ventas`)) || [];
+        insumos = JSON.parse(localStorage.getItem(`${datosAppAdministracion}insumos`)) || [];
+        clientes = JSON.parse(localStorage.getItem(`${datosAppAdministracion}clientes`)) || [];
+        productos = JSON.parse(localStorage.getItem(`${datosAppAdministracion}productos`)) || [];
     } catch (error) {
         console.error("Error al cargar datos desde localStorage:", error);
         // Si hay un error, inicializar las listas como vacías
@@ -28,12 +30,12 @@ const cargarDatos = () => {
 
 // Guardar datos en localStorage
 const guardarDatos = () => {
-    localStorage.setItem('produccion', JSON.stringify(produccion));
-    localStorage.setItem('pedidos', JSON.stringify(pedidos));
-    localStorage.setItem('ventas', JSON.stringify(ventas));
-    localStorage.setItem('insumos', JSON.stringify(insumos));
-    localStorage.setItem('clientes', JSON.stringify(clientes));
-    localStorage.setItem('productos', JSON.stringify(productos));
+    localStorage.setItem(`${datosAppAdministracion}produccion`, JSON.stringify(produccion));
+    localStorage.setItem(`${datosAppAdministracion}pedidos`, JSON.stringify(pedidos));
+    localStorage.setItem(`${datosAppAdministracion}ventas`, JSON.stringify(ventas));
+    localStorage.setItem(`${datosAppAdministracion}insumos`, JSON.stringify(insumos));
+    localStorage.setItem(`${datosAppAdministracion}clientes`, JSON.stringify(clientes));
+    localStorage.setItem(`${datosAppAdministracion}productos`, JSON.stringify(productos));
 };
 
 document.addEventListener('DOMContentLoaded', () => {
